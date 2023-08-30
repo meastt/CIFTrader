@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buy/Sell/Trade Profile</title>
+<link rel="stylesheet" href="/static/assets/css/main.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+  <header>
+    <h1>Buy/Sell/Trade Profile</h1>
+  </header>
+  <nav>
+    <!-- Navigation links if needed -->
+  </nav>
+  <main>
+    <section class="profile-info">
+      <h2>Your Profile</h2>
+      <p>Name: <span id="user-name"></span></p>
+      <p>Location: <span id="user-location"></span></p>
+    </section>
+    <section class="listing-form">
+      <h3>Create a Listing</h3>
+      <form id="item-form">
+        <input type="text" id="item-name" placeholder="Item Name">
+        <textarea id="item-description" placeholder="Item Description"></textarea>
+        <input type="file" id="item-photo">
+        <input type="text" id="item-price" placeholder="Price or Trade Info">
+        <button type="button" onclick="createListing()">Create Listing</button>
+      </form>
+    </section>
+    <section class="listings">
+      <h3>Your Listings</h3>
+      <ul id="listings-list">
+        <!-- Listed items will be added here dynamically using JavaScript -->
+      </ul>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2023 Buy/Sell/Trade Profile</p>
+  </footer>
+
+  <script>
+    const userName = prompt("Enter your name:");
+    const userLocation = prompt("Enter your location:");
+    
+    // Display user's name and location
+    document.getElementById("user-name").textContent = userName;
+    document.getElementById("user-location").textContent = userLocation;
+
+    const listings = []; // Array to store listings
+    
+    function createListing() {
+      const name = document.getElementById("item-name").value;
+      const description = document.getElementById("item-description").value;
+      const photo = document.getElementById("item-photo").files[0]; // Get the selected file
+      const priceOrTrade = document.getElementById("item-price").value;
+      
+      const newItem = {
+        name,
+        description,
+        priceOrTrade,
+        photoURL: URL.createObjectURL(photo) // Generate a temporary URL for the uploaded photo
+      };
+      listings.push(newItem);
+      renderListings();
+      
+      // Clear the form fields
+      document.getElementById("item-name").value = "";
+      document.getElementById("item-description").value = "";
+      document.getElementById("item-photo").value = "";
+      document.getElementById("item-price").value = "";
+    }
+
+    function renderListings() {
+      const listingsList = document.getElementById("listings-list");
+      listingsList.innerHTML = ""; // Clear previous listings
+      
+      listings.forEach((listing, index) => {
+        const listingItem = document.createElement("li");
+        listingItem.innerHTML = `
+          <strong>${listing.name}</strong><br>
+          ${listing.description}<br>
+          Price or Trade: ${listing.priceOrTrade}<br>
+          <img src="${listing.photoURL}" alt="${listing.name}">
+          <button onclick="editListing(${index})">Edit</button>
+          <button onclick="deleteListing(${index})">Delete</button>
+        `;
+        listingsList.appendChild(listingItem);
+      });
+    }
+
+    function editListing(index) {
+      // For demonstration purposes, you can prompt the user for updated data
+      const updatedName = prompt("Enter updated name:", listings[index].name);
+      const updatedDescription = prompt("Enter updated description:", listings[index].description);
+      const updatedPriceOrTrade = prompt("Enter updated price or trade info:", listings[index].priceOrTrade);
+
+      // Update the listing
+      listings[index].name = updatedName;
+      listings[index].description = updatedDescription;
+      listings[index].priceOrTrade = updatedPriceOrTrade;
+
+      renderListings();
+    }
+
+    function deleteListing(index) {
+      listings.splice(index, 1); // Remove the listing at the specified index
+      renderListings();
+    }
+  </script>
+</body>
+</html>
