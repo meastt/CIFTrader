@@ -1,6 +1,9 @@
 from flask import Flask, session,request,redirect, app
 from flask import Response as DaResponse
 from webapp3 import *
+from LogoutFile import *
+from ReaseachDa import *
+
 
 
 
@@ -33,6 +36,7 @@ def MainDef():
 def RouteDef(searchURL):    
     app = webapp2.WSGIApplication([
     ("/test", Test),
+    ("/Login", Login)
     ]
     , searchURL=searchURL ) 
     return webapp(app()) 
