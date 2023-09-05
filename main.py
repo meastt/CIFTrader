@@ -36,7 +36,9 @@ def MainDef():
 def RouteDef(searchURL):    
     app = webapp2.WSGIApplication([
     ("/test", Test),
-    ("/Login", Login)
+    ("/Login", Login),
+    ("/newaccount", NewAccount),
+    ("/update", Update),
     ]
     , searchURL=searchURL ) 
     return webapp(app()) 
