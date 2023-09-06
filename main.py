@@ -3,6 +3,7 @@ from flask import Response as DaResponse
 from webapp3 import *
 from LogoutFile import *
 from ReaseachDa import *
+from NSN import *
 
 
 
@@ -16,7 +17,7 @@ class MainPage(BaseHandler):
         daindex=str(f.read())
         self.response.write(daindex)
 
-class Test(BaseHandler):
+class Index(BaseHandler):
     def get(self):
         f = open("static/index.html", "r")
         daindex=str(f.read())
@@ -35,9 +36,13 @@ def MainDef():
 @app.route('/<searchURL>',methods=['GET','POST'])    
 def RouteDef(searchURL):    
     app = webapp2.WSGIApplication([
-    ("/test", Test),
+    ("/FSCG", FSCG),
+    ("/test", Index),
     ("/Login", Login),
     ("/newaccount", NewAccount),
+    ("/NCB", NCB),
+    ("/NIIN", NIIN),
+    ("nsnnumber", NSNnumber),
     ("/update", Update),
     ]
     , searchURL=searchURL ) 
