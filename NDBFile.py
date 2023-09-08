@@ -11,3 +11,12 @@ class Basic(ndb.Model):
   password = ndb.StringProperty()
   phone = ndb.StringProperty()
   
+class Items(ndb.Model):
+    UpDate = ndb.DateTimeProperty(auto_now_add=True)
+    MemberID = ndb.StringProperty()
+    NSN = ndb.StringProperty()
+    Price = ndb.StringProperty()
+    Image = ndb.StringProperty()
+    Available = ndb.BooleanProperty()
+    SellorBuy = ndb.StringProperty()
+        
