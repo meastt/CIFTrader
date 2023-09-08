@@ -17,6 +17,22 @@ html2="""
 
 
 """
+def FormUpload(ContentType,FileType,MemberID,DaFile):
+    DocType=ContentType
+    daTime= datetime.now()
+    AtEnd=".png"
+   
+    filename = FileType + MemberID + str(daTime.date())+str(daTime.time())+AtEnd
+    
+
+    #daForm = FormData(MemberID= MemberID,filename=filename,FileType=FileType,ContentType=ContentType)     
+    #daForm.put()
+    client = storage.Client(project="CIFTrader")
+    bucket = client.get_bucket("CIFTrader.appspot.com")
+    blob = Blob(filename, bucket)
+    blob.upload_from_file(DaFile)
+    messtome='A form has been uploaded by '+MemberID
+    
 
 class SellPage(BaseHandler):
     def get(self):
@@ -34,15 +50,18 @@ class SellPage(BaseHandler):
 
         self.response.write(html2)
     def post(self):
-        NSN=self.request.get("NSN")
-        Price=self.request.get("Price")
-        imagefile=self.request.POST.get("imagefile")
-        self.response.write(html1)
-        self.response.write("<h1>New Listing</h1>")
-        self.response.write("""
-        Your item has been listed
-        
+        client = ndb.Client()
+        with client.context():
+            NSN=self.request.get("NSN")
+            Price=self.request.get("Price")
+            imagefile=self.request.POST.get("imagefile")
+            #FormUpload()
+            self.response.write(html1)
+            self.response.write("<h1>New Listing</h1>")
+            self.response.write("""
+            Your item has been listed
+            
 
-        """)
+            """)
 
-        self.response.write(html2)
+            self.response.write(html2)
