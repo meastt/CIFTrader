@@ -4,6 +4,8 @@ from webapp3 import *
 from LogoutFile import *
 from ReaseachDa import *
 from NSN import *
+from PostToBuy import *
+
 
 
 
@@ -37,7 +39,7 @@ def MainDef():
 def RouteDef(searchURL):    
     app = webapp2.WSGIApplication([
     ("/FSCG", FSCG),
-    ("/test", Index),
+    ("/test", Test),
     ("/Login", Login),
     ("/newaccount", NewAccount),
     ("/NCB", NCB),

@@ -4,7 +4,7 @@ from NDBFile import ndb
 import email
 import ReaseachDa
 
-class Basic(ndb.model):
+class Basic(ndb.Model):
     username = ndb.StringProperty()
     password = ndb.StringProperty()
     email = ndb.StringProperty()
@@ -49,7 +49,7 @@ class Logout(BaseHandler):
             self.response.write(LoginHtml.format(page = "Log out", logout = """<a href='/login'>Log In<a>"""))
             self.session['signedin'] = False
             self.response.write("You are signed out")
-            self.response.write(LogoputHml)
+            self.response.write(LogoutHtml)
 
 class Update(BaseHandler):
     def get(self): 
