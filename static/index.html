@@ -10,6 +10,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="is-preload">
@@ -17,53 +18,157 @@
 		<!-- Wrapper -->
 			<div id="wrapper">
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
+		<!-- Header -->
+		<header id="header">
+			<div class="logo">
+				<img src="static/images/homeicon.png" alt="" style="width: 50px; margin-top: 10px;" />
+			</div>
+			<div class="content">
+				<div class="inner">
+					<h1>CIF Trader</h1>
+					<p>Welcome to CIF Trader, the dedicated platform where military members can seamlessly buy, sell, 
+						and trade military-issued gear, especially during the pivotal moments of clearing a duty 
+						station or exiting military service.</p>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#work">Marketplace</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="login-button-container">
+				<button type="button" class="login-button-home" onclick="location.href='/login'">Login</button><br>
+				<button type="button" class="create-account" onclick="location.href='#createaccount'">Create Account</button>
+			</div>
+			
+		</header>
+
+
+			<!-- Main -->
+				<div id="main">
+				<!-- Create Account -->
+				<article id="create-account">
+					<h2 class="major">Create Account</h2>
+					<span class="image main"><img src="static/images/handshake.png" alt="Create Account Image" /></span>
+					
+					<form action="####" method="post">
+						<!-- Name Field -->
+						<div class="field" style="margin-bottom: 20px;">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" required>
 						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>CIF Trader</h1>
-								<p>A fully responsive site template designed by <a href="https://html5up.net">HTML5 UP</a> and released<br />
-								for free under the <a href="https://html5up.net/license">Creative Commons</a> license.</p>
-							</div>
+						
+						<!-- Email Field -->
+						<div class="field" style="margin-bottom: 20px;">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" required>
 						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">Create an Account</a></li>
-								<li><a href="#work">Marketplace</a></li>
-								<li><a href="#about">About</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
-					</header>
+						
+						<!-- Branch of Service Dropdown -->
+						<div class="field" style="margin-bottom: 20px;">
+							<label for="branch">Branch of Service</label>
+							<select name="branch" id="branch">
+								<option value="army">Army</option>
+								<option value="navy">Navy</option>
+								<option value="airforce">Air Force</option>
+								<option value="marines">Marines</option>
+								<option value="coastguard">Coast Guard</option>
+							</select>
+						</div>
+						
+						<!-- Zip Code Field -->
+						<div class="field" style="margin-bottom: 20px;">
+							<label for="zip">Zip Code</label>
+							<input type="text" name="zip" id="zip" required>
+						</div>
+						
+						<!-- Submit Button -->
+						<div class="actions">
+							<input type="submit" value="Create Account" class="primary">
+						</div>
+					</form>
+				</article>
 
-				<!-- Main -->
-					<div id="main">
+				<!-- Marketplace -->
+				<article id="work">
+					<h2 class="major">Marketplace</h2>
+					<span class="image main"><img src="static/images/marketplaceimage.png" alt="Marketplace Image" /></span>
+					
+					<p>Welcome to the CIF Trader Marketplace, where you can find a wide array of military gear listed by our community members. Browse through the list to find the gear you need.</p>
+					
+					<table>
+						<thead>
+							<tr>
+								<th>Image</th>
+								<th>Location</th>
+								<th>Item Name</th>
+								<th>Category</th>
+								<th>Branch of Service</th>
+								<th>Price</th>
+								<th>Message Sellar</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- This is where the data from your database will go. Here's an example of how it might look: -->
+							<tr>
+								<td><img src="static/images/boots.png" alt="Item 1" style="width: 50px;"></td>
+								<td>76543</td>
+								<td>Combat Boots</td>
+								<td>Footwear</td>
+								<td>Army</td>
+								<td>$50</td>
+								<td><button type="button" class="message-seller-btn" onclick="location.href='/message'">Message Seller</button></td>
+							</tr>
+							<tr>
+								<td><img src="static/images/tacvest.png" alt="Item 2" style="width: 50px;"></td>
+								<td>22134</td>
+								<td>Tactical Vest</td>
+								<td>Clothing</td>
+								<td>Marines</td>
+								<td>$75</td>
+								<td><button type="button" class="message-seller-btn" onclick="location.href='/message'">Message Seller</button></td>
+							</tr>
+							<!-- Repeat similar rows here with data from your database -->
+						</tbody>
+					</table>
+				</article>
 
-						<!-- Intro -->
-							<article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="static/images/pic01.jpg" alt="" /></span>
-								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin  aliquamfacilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
-							</article>
 
-						<!-- Work -->
-							<article id="work">
-								<h2 class="major">Work</h2>
-								<span class="image main"><img src="static/images/pic02.jpg" alt="" /></span>
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
-							</article>
 
 						<!-- About -->
 							<article id="about">
-								<h2 class="major">About</h2>
-								<span class="image main"><img src="static/images/pic03.jpg" alt="" /></span>
-								<p>Lorem ipsum dolor sit amet, consectetur et adipiscing elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices. Aliquam libero et malesuada fames ac ante ipsum primis in faucibus. Cras viverra ligula sit amet ex mollis mattis lorem ipsum dolor sit amet.</p>
+								<h1>About CIF Trader</h1>
+  
+								<p>Welcome to CIF Trader, the dedicated platform where military members can seamlessly buy, sell, and trade military-issued gear, especially during the pivotal moments of clearing a duty station or exiting military service.</p>
+							  
+								<h2>Our Mission</h2>
+							  
+								<p>At CIF Trader, we recognize that the transition periods within military life can be complex and sometimes challenging. Our mission is to facilitate a smoother, more economical experience during these times by providing a trustworthy marketplace where members can find the gear they need, or pass on the items they no longer require to others who do.</p>
+							  
+								<h2>Our Vision</h2>
+							  
+								<p>To become the premier community-driven platform that fosters support, camaraderie, and financial prudence among military personnel across all branches. We envision a space where military members can rely on each other to find essential gear, making the transitions between duty stations less stressful and more cost-effective.</p>
+							  
+								<h2>Why Choose CIF Trader?</h2>
+							  
+								<ul>
+								  <li><strong>Community-Centric:</strong> Built by military members for military members, we understand the unique demands and expectations of our community.</li>
+								  <li><strong>Secure Transactions:</strong> Your safety is our priority. We employ stringent security measures to ensure safe and secure transactions.</li>
+								  <li><strong>Quality Assurance:</strong> Our platform is committed to hosting only authentic, military-issued gear, ensuring you have access to quality items every time.</li>
+								  <li><strong>Eco-Friendly:</strong> By encouraging the reuse and recycling of military gear, we contribute to a greener, more sustainable environment.</li>
+								  <li><strong>Support and Guidance:</strong> Our support team is always on standby to assist with any queries or concerns, guiding you through a hassle-free trading experience.</li>
+								</ul>
+							  
+								<h2>Join Us</h2>
+							  
+								<p>Become a part of CIF Trader today and experience the ease of trading military gear with trust and confidence. Together, we build a community that supports each other through every phase of military service.</p>
+							  
+								<p>Connect with us on 
+								  <a href="#" target="_blank">Facebook</a>, 
+								  <a href="#" target="_blank">Twitter</a>, and 
+								  <a href="#" target="_blank">Instagram</a> for the latest updates and to join a community of like-minded individuals.</p>
 							</article>
 
 						<!-- Contact -->
@@ -340,10 +445,39 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 							</article>
 
 					</div>
+				
+					<h2>Why It Works</h2>
+					<div class="value-cards">
+						<hr class="top-line" />
+						
+						<div class="card">
+							<h3>Community-Centric Platform</h3>
+							<p>Join CIF Trader, a community built by and for military members. We facilitate seamless transitions between duty stations, promoting camaraderie and financial prudence.</p>
+						</div>
+						<div class="card">
+							<h3>Safe and Secure Transactions</h3>
+							<p>CIF Trader is your go-to platform for connecting with peers for gear trading. We provide a meeting ground, not overseeing transactions, thus fostering a space of trust and direct negotiation.</p>
+						</div>
+						<div class="card">
+							<h3>Eco-Friendly and Economical</h3>
+							<p>Discover authentic military-issued gear with CIF Trader. Our support team is always ready to assist, ensuring a smooth and reliable platform experience.</p>
+						</div>
+						<hr class="bottom-line" />
+					</div>
+					<h2>Ready To Get Started?</h2>
+					<div class="final-cta-section">
+						<div class="cta-content">
+							<p class="cta-text">The road to clearning CIF starts here. Create your account and get started buying, selling or trading your CIF gear today!</p>
+							<a href="#create-account" class="cta-button">Create an Account</a>
+						</div>
+					</div>
+					
+				
+					
 
 				<!-- Footer -->
 					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<p class="copyright">&copy; 2023 CIF Trader <br><br> Design: <a href="www.MOPH.org">Military Order of the Purple Heart</a>.</p>
 					</footer>
 
 			</div>
