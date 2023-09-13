@@ -1,0 +1,496 @@
+<!DOCTYPE HTML>
+<!--
+	Dimension by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>CIF Trader</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/assets/css/main.css" />
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+		<noscript><link rel="stylesheet" href="static/assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<div class="logo">
+				<img src="static/images/homeicon.png" alt="" style="width: 50px; margin-top: 10px;" />
+			</div>
+			<div class="content">
+				<div class="inner">
+					<h1>CIF Trader</h1>
+					<p>Welcome to CIF Trader, the dedicated platform where military members can seamlessly buy, sell, 
+						and trade military-issued gear, especially during the pivotal moments of clearing a duty 
+						station or exiting military service.</p>
+				</div>
+			</div>
+			<nav>
+				<ul>
+					<li><a href="#work">Marketplace</a></li>
+					<li><a href="#about">About</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+			</nav>
+			<div class="login-button-container">
+				<button type="button" class="login-button-home" onclick="location.href='/login'">Login</button><br>
+				<button type="button" class="create-account" onclick="location.href='#createaccount'">Create Account</button>
+			</div>
+			
+		</header>
+
+
+			<!-- Main -->
+				<div id="main">
+				<!-- Create Account -->
+				<article id="create-account">
+					<h2 class="major">Create Account</h2>
+					<span class="image main"><img src="static/images/handshake.png" alt="Create Account Image" /></span>
+					
+					<form action="####" method="post">
+						<!-- Name Field -->
+						<div class="field" style="margin-bottom: 20px;">
+							<label for="name">Name</label>
+							<input type="text" name="name" id="name" required>
+						</div>
+						
+						<!-- Email Field -->
+						<div class="field" style="margin-bottom: 20px;">
+							<label for="email">Email</label>
+							<input type="email" name="email" id="email" required>
+						</div>
+						
+						<!-- Branch of Service Dropdown -->
+						<div class="field" style="margin-bottom: 20px;">
+							<label for="branch">Branch of Service</label>
+							<select name="branch" id="branch">
+								<option value="army">Army</option>
+								<option value="navy">Navy</option>
+								<option value="airforce">Air Force</option>
+								<option value="marines">Marines</option>
+								<option value="coastguard">Coast Guard</option>
+							</select>
+						</div>
+						
+						<!-- Zip Code Field -->
+						<div class="field" style="margin-bottom: 20px;">
+							<label for="zip">Zip Code</label>
+							<input type="text" name="zip" id="zip" required>
+						</div>
+						
+						<!-- Submit Button -->
+						<div class="actions">
+							<input type="submit" value="Create Account" class="primary">
+						</div>
+					</form>
+				</article>
+
+				<!-- Marketplace -->
+				<article id="work">
+					<h2 class="major">Marketplace</h2>
+					<span class="image main"><img src="static/images/marketplaceimage.png" alt="Marketplace Image" /></span>
+					
+					<p>Welcome to the CIF Trader Marketplace, where you can find a wide array of military gear listed by our community members. Browse through the list to find the gear you need.</p>
+					
+					<table>
+						<thead>
+							<tr>
+								<th>Image</th>
+								<th>Location</th>
+								<th>Item Name</th>
+								<th>Category</th>
+								<th>Branch of Service</th>
+								<th>Price</th>
+								<th>Message Sellar</th>
+							</tr>
+						</thead>
+						<tbody>
+							<!-- This is where the data from your database will go. Here's an example of how it might look: -->
+							<tr>
+								<td><img src="static/images/boots.png" alt="Item 1" style="width: 50px;"></td>
+								<td>76543</td>
+								<td>Combat Boots</td>
+								<td>Footwear</td>
+								<td>Army</td>
+								<td>$50</td>
+								<td><button type="button" class="message-seller-btn" onclick="location.href='/message'">Message Seller</button></td>
+							</tr>
+							<tr>
+								<td><img src="static/images/tacvest.png" alt="Item 2" style="width: 50px;"></td>
+								<td>22134</td>
+								<td>Tactical Vest</td>
+								<td>Clothing</td>
+								<td>Marines</td>
+								<td>$75</td>
+								<td><button type="button" class="message-seller-btn" onclick="location.href='/message'">Message Seller</button></td>
+							</tr>
+							<!-- Repeat similar rows here with data from your database -->
+						</tbody>
+					</table>
+				</article>
+
+
+
+						<!-- About -->
+							<article id="about">
+								<h1>About CIF Trader</h1>
+  
+								<p>Welcome to CIF Trader, the dedicated platform where military members can seamlessly buy, sell, and trade military-issued gear, especially during the pivotal moments of clearing a duty station or exiting military service.</p>
+							  
+								<h2>Our Mission</h2>
+							  
+								<p>At CIF Trader, we recognize that the transition periods within military life can be complex and sometimes challenging. Our mission is to facilitate a smoother, more economical experience during these times by providing a trustworthy marketplace where members can find the gear they need, or pass on the items they no longer require to others who do.</p>
+							  
+								<h2>Our Vision</h2>
+							  
+								<p>To become the premier community-driven platform that fosters support, camaraderie, and financial prudence among military personnel across all branches. We envision a space where military members can rely on each other to find essential gear, making the transitions between duty stations less stressful and more cost-effective.</p>
+							  
+								<h2>Why Choose CIF Trader?</h2>
+							  
+								<ul>
+								  <li><strong>Community-Centric:</strong> Built by military members for military members, we understand the unique demands and expectations of our community.</li>
+								  <li><strong>Secure Transactions:</strong> Your safety is our priority. We employ stringent security measures to ensure safe and secure transactions.</li>
+								  <li><strong>Quality Assurance:</strong> Our platform is committed to hosting only authentic, military-issued gear, ensuring you have access to quality items every time.</li>
+								  <li><strong>Eco-Friendly:</strong> By encouraging the reuse and recycling of military gear, we contribute to a greener, more sustainable environment.</li>
+								  <li><strong>Support and Guidance:</strong> Our support team is always on standby to assist with any queries or concerns, guiding you through a hassle-free trading experience.</li>
+								</ul>
+							  
+								<h2>Join Us</h2>
+							  
+								<p>Become a part of CIF Trader today and experience the ease of trading military gear with trust and confidence. Together, we build a community that supports each other through every phase of military service.</p>
+							  
+								<p>Connect with us on 
+								  <a href="#" target="_blank">Facebook</a>, 
+								  <a href="#" target="_blank">Twitter</a>, and 
+								  <a href="#" target="_blank">Instagram</a> for the latest updates and to join a community of like-minded individuals.</p>
+							</article>
+
+						<!-- Contact -->
+							<article id="contact">
+								<h2 class="major">Contact</h2>
+								<form method="post" action="#">
+									<div class="fields">
+										<div class="field half">
+											<label for="name">Name</label>
+											<input type="text" name="name" id="name" />
+										</div>
+										<div class="field half">
+											<label for="email">Email</label>
+											<input type="text" name="email" id="email" />
+										</div>
+										<div class="field">
+											<label for="message">Message</label>
+											<textarea name="message" id="message" rows="4"></textarea>
+										</div>
+									</div>
+									<ul class="actions">
+										<li><input type="submit" value="Send Message" class="primary" /></li>
+										<li><input type="reset" value="Reset" /></li>
+									</ul>
+								</form>
+								<ul class="icons">
+									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+								</ul>
+							</article>
+
+						<!-- Elements -->
+							<article id="elements">
+								<h2 class="major">Elements</h2>
+
+								<section>
+									<h3 class="major">Text</h3>
+									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+									<hr />
+									<h2>Heading Level 2</h2>
+									<h3>Heading Level 3</h3>
+									<h4>Heading Level 4</h4>
+									<h5>Heading Level 5</h5>
+									<h6>Heading Level 6</h6>
+									<hr />
+									<h4>Blockquote</h4>
+									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+									<h4>Preformatted</h4>
+									<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+    print 'Iteration ' + i;
+    deck.shuffle();
+    i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+								</section>
+
+								<section>
+									<h3 class="major">Lists</h3>
+
+									<h4>Unordered</h4>
+									<ul>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Alternate</h4>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam.</li>
+										<li>Sagittis adipiscing.</li>
+										<li>Felis enim feugiat.</li>
+									</ul>
+
+									<h4>Ordered</h4>
+									<ol>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis viverra.</li>
+										<li>Felis enim feugiat.</li>
+										<li>Dolor pulvinar etiam.</li>
+										<li>Etiam vel felis lorem.</li>
+										<li>Felis enim et feugiat.</li>
+									</ol>
+									<h4>Icons</h4>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+									</ul>
+
+									<h4>Actions</h4>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Table</h3>
+									<h4>Default</h4>
+									<div class="table-wrapper">
+										<table>
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+
+									<h4>Alternate</h4>
+									<div class="table-wrapper">
+										<table class="alt">
+											<thead>
+												<tr>
+													<th>Name</th>
+													<th>Description</th>
+													<th>Price</th>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>Item One</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Two</td>
+													<td>Vis ac commodo adipiscing arcu aliquet.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Three</td>
+													<td> Morbi faucibus arcu accumsan lorem.</td>
+													<td>29.99</td>
+												</tr>
+												<tr>
+													<td>Item Four</td>
+													<td>Vitae integer tempus condimentum.</td>
+													<td>19.99</td>
+												</tr>
+												<tr>
+													<td>Item Five</td>
+													<td>Ante turpis integer aliquet porttitor.</td>
+													<td>29.99</td>
+												</tr>
+											</tbody>
+											<tfoot>
+												<tr>
+													<td colspan="2"></td>
+													<td>100.00</td>
+												</tr>
+											</tfoot>
+										</table>
+									</div>
+								</section>
+
+								<section>
+									<h3 class="major">Buttons</h3>
+									<ul class="actions">
+										<li><a href="#" class="button primary">Primary</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button">Default</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+									<ul class="actions">
+										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+									</ul>
+									<ul class="actions">
+										<li><span class="button primary disabled">Disabled</span></li>
+										<li><span class="button disabled">Disabled</span></li>
+									</ul>
+								</section>
+
+								<section>
+									<h3 class="major">Form</h3>
+									<form method="post" action="#">
+										<div class="fields">
+											<div class="field half">
+												<label for="demo-name">Name</label>
+												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
+											</div>
+											<div class="field half">
+												<label for="demo-email">Email</label>
+												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
+											</div>
+											<div class="field">
+												<label for="demo-category">Category</label>
+												<select name="demo-category" id="demo-category">
+													<option value="">-</option>
+													<option value="1">Manufacturing</option>
+													<option value="1">Shipping</option>
+													<option value="1">Administration</option>
+													<option value="1">Human Resources</option>
+												</select>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+												<label for="demo-priority-low">Low</label>
+											</div>
+											<div class="field half">
+												<input type="radio" id="demo-priority-high" name="demo-priority">
+												<label for="demo-priority-high">High</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-copy" name="demo-copy">
+												<label for="demo-copy">Email me a copy</label>
+											</div>
+											<div class="field half">
+												<input type="checkbox" id="demo-human" name="demo-human" checked>
+												<label for="demo-human">Not a robot</label>
+											</div>
+											<div class="field">
+												<label for="demo-message">Message</label>
+												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+											</div>
+										</div>
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</form>
+								</section>
+
+							</article>
+
+					</div>
+				
+					<h2>Why It Works</h2>
+					<div class="value-cards">
+						<hr class="top-line" />
+						
+						<div class="card">
+							<h3>Community-Centric Platform</h3>
+							<p>Join CIF Trader, a community built by and for military members. We facilitate seamless transitions between duty stations, promoting camaraderie and financial prudence.</p>
+						</div>
+						<div class="card">
+							<h3>Safe and Secure Transactions</h3>
+							<p>CIF Trader is your go-to platform for connecting with peers for gear trading. We provide a meeting ground, not overseeing transactions, thus fostering a space of trust and direct negotiation.</p>
+						</div>
+						<div class="card">
+							<h3>Eco-Friendly and Economical</h3>
+							<p>Discover authentic military-issued gear with CIF Trader. Our support team is always ready to assist, ensuring a smooth and reliable platform experience.</p>
+						</div>
+						<hr class="bottom-line" />
+					</div>
+					<h2>Ready To Get Started?</h2>
+					<div class="final-cta-section">
+						<div class="cta-content">
+							<p class="cta-text">The road to clearning CIF starts here. Create your account and get started buying, selling or trading your CIF gear today!</p>
+							<a href="#create-account" class="cta-button">Create an Account</a>
+						</div>
+					</div>
+					
+				
+					
+
+				<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy; 2023 CIF Trader <br><br> Design: <a href="www.MOPH.org">Military Order of the Purple Heart</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="static/assets/js/jquery.min.js"></script>
+			<script src="static/assets/js/browser.min.js"></script>
+			<script src="static/assets/js/breakpoints.min.js"></script>
+			<script src="static/assets/js/util.js"></script>
+			<script src="static/assets/js/main.js"></script>
+
+	</body>
+</html>
